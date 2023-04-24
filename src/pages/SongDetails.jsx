@@ -8,7 +8,6 @@ import { useGetSongDetailsQuery } from '../redux/services/shazamCore';
 const SongDetails = () => {
     const dispatch = useDispatch();
     const {songid} = useParams();
-    console.log("Song id", songid);
     const {activeSoong, isPlaying} = useSelector(state => state.player);
     const {data:songData, isFetching: isFetchingSongDetails} = useGetSongDetailsQuery({songid});
 
